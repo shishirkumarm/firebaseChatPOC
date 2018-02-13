@@ -1,0 +1,70 @@
+.progress {
+  height: 30px;
+}
+.progress-bar {
+  line-height: 30px;
+}
+.progress > .btn {
+  border-color: #ADADAD;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  height: 34px;
+  line-height: 0;
+  margin: -2px 0 0 -7px;
+  padding: 0;
+  position: absolute;
+  width: 15px;
+}
+.progress > .btn:before {
+  background: none repeat scroll 0 0 #ADADAD;
+  content: " ";
+  height: 21px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 1px;
+}
+.progress + .help-block, .progress + .strength-info {
+  margin-top: -15px;
+}
+.strength-info {
+  display: block;
+}
+.password-strength-very-weak {
+  color: #D9534F;
+}
+.password-strength-very-weak .progress-bar {
+  background-color: #D9534F;
+  width: 20%;
+}
+
+.password-strength-weak {
+  color: #F0AD4E;
+}
+.password-strength-weak .progress-bar {
+  background-color: #F0AD4E;
+  width: 40%;
+}
+
+.password-strength-medium {
+  color: #5BC0DE;
+}
+.password-strength-medium .progress-bar {
+  background-color: #5BC0DE;
+  width: 60%;
+}
+
+.password-strength-strong {
+  color: #428BCA;
+}
+.password-strength-strong .progress-bar {
+  background-color: #428BCA;
+  width: 80%;
+}
+
+.password-strength-very-strong {
+  color: #5CB85C;
+}
+.password-strength-very-strong .progress-bar {
+  background-color: #5CB85C;
+  width: 100%;
+}

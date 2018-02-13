@@ -1,0 +1,10 @@
+<div class="container">
+    <p class='welcome'>Welcome {{authService.currentUserDisplayName}}..</p>
+    <div class="split left">    
+      <ul id="myUL">
+        <li *ngFor="let buddyItem of homeService.usersList | async" (click)="startChatting(buddyItem)">
+          <span *ngIf="buddyItem.$key !== authService.currentUserId" >{{buddyItem.name}}</span>
+        </li>
+      </ul>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+<div class='wrapper'>
+    <div class="login-box">
+        <div class="box-p-lr">
+            <div class="header text-center m-btm">
+                <div class="title-text"><b>{{static_string.us.sign_up_with_email}}</b></div>
+                <div class="f-16 sub-title-color">{{static_string.us.sign_up_profile}}</div>
+            </div>
+            <div class="main m-top-xl">
+                <form name="form" [formGroup]="form" novalidate>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label>{{static_string.us.first_name}}</label>
+                                <input type="text" class="form-control" formControlName="first_name">
+                                <error-message [isFormSubmitted]="isFormSubmitted" [control]="form.controls.first_name"></error-message>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label>{{static_string.us.last_name}}</label>
+                                <input type="text" class="form-control" formControlName="last_name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>{{static_string.us.email}}</label>
+                                <input type="text" class="form-control" formControlName="email">
+                                <error-message [control]="form.controls.email" [isFormSubmitted]="isFormSubmitted"></error-message>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>{{static_string.us.password}}</label>
+                                <div class="pull-right">
+                                    <input type="checkbox" id="checkbox" formControlName="passwordCheckbox" (click)="toggleShow()" />
+                                    <label for="checkbox">{{static_string.us.show_password}}</label>
+                                </div>
+
+                                <input type="password" class="form-control" formControlName="password" appShowHideInput>
+                                <error-message [control]="form.controls.password" [isFormSubmitted]="isFormSubmitted"></error-message>
+                            </div>
+                            <div class="col-sm-12">
+                            <label>{{static_string.us.pwd_strength}}</label>
+                            <app-password-strength [password]="form.get('password').value"></app-password-strength>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>{{static_string.us.country}}</label>
+                                <select class="selectpicker form-control" formControlName="country">
+                                    <option *ngFor="let countryItem of authService.locationList | async" [ngValue]="countryItem.$key">{{countryItem.$value}}</option>
+                                </select>
+                                <error-message [control]="form.controls.country" [isFormSubmitted]="isFormSubmitted"></error-message>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row email-btn-align">
+                        <div class="col-sm-12">
+                            <button type="button" class="btn btn-block login-btn" (click)="submit(form.value)">{{static_string.us.email_link_to_sign_in}}</button>
+                        </div>
+                        <small class="pull-left error" *ngIf="errorMessage">{{static_string.us.wrong_crendentials}}</small>
+                    </div>
+                </form>
+            </div>
+            <div class="footer m-btm m-top">
+                <div class="p-top">
+                    <div>{{global_static_string.us.already_have_an_acc}}</div>
+                    <div class="red-text inline cursor-pointer" (click)="exisitingUser()">{{global_static_string.us.sign_in}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

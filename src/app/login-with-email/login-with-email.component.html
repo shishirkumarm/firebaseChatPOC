@@ -1,0 +1,57 @@
+<div class="wrapper">
+    <div class="login-box">
+        <div class="box-p-lr">
+            <div class="header text-center m-btm">
+                <div class="title-text"><b>{{static_string.us.login}}</b></div>
+                <div class="f-16 sub-title-color">{{static_string.us.login_using_your_email}}</div>
+            </div>
+            <div class="main m-top-xl">
+                <form name="form" [formGroup]="form" autocomplete="on">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>{{static_string.us.email}}</label>
+                                <input type="text" class="form-control" type="email" name="username" formControlName="email">
+                                <error-message [isFormSubmitted]="isFormSubmitted" [control]="form.controls.email"></error-message>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>{{static_string.us.password}}</label>
+                                <input type="password" class="form-control" name="password" formControlName="password">
+                                <error-message [isFormSubmitted]="isFormSubmitted" [control]="form.controls.password"></error-message>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <input name="remember" type="checkbox" formControlName="rememberMe" (click)="rememberMe()">
+                                <label for="remember">{{static_string.us.remember_me}}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-top-md">
+                        <div class="col-sm-6">
+                            <button type="submit" (click)="submit(form.value)" class="btn btn-block login-btn">{{static_string.us.sign_in}}</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="pull-right p-10 cursor-pointer" (click)='forgotPassword()'>{{static_string.us.forgot_pwd}}</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="red-color f-16 text-center" (click)='loginWithSocialLink()'>
+                <b>  {{static_string.us.or_sign_in_with_sociallinks}} </b>
+            </div>
+            <div class="footer m-btm m-top">
+                <div class="p-top f-14">
+                    <div>{{static_string.us.dont_yet_have_acc}}</div>
+                    <div class="red-text inline f-16 cursor-pointer" (click)='newUserSignup()'>{{static_string.us.sign_up}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

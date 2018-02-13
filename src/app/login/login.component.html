@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <div class="login-box">
+    <div class="box-p-lr">
+      <div class="header text-center m-btm">
+        <div class="title-text"><b>{{static_string.us.sign_up}}</b></div>
+        <div class="f-16 sub-title-color">{{static_string.us.signup_to_create_profile}}</div>
+      </div>
+      <div class="main text-center m-top-xl">
+        <div class="">
+          <button type="button" class="btn btn-primary" (click)="loginWithFacebook()">
+              <div class="fb-svg icon-align"></div>
+              <div class="f-18 inline text-left">{{static_string.us.continue_with_fb}}
+                <div class="f-13">{{static_string.us.we_wont_post_without_asking}}</div>
+              </div>
+          </button>
+        </div>
+        <div class="m-top">
+          <button type="button" class="btn btn-default" (click)="loginWithGoogle()">
+                <div class="google-svg icon-align"></div>
+                <div class="inline f-18" style="vertical-align: top; margin-top: 10px;">{{static_string.us.continue_with_google}}</div>
+          </button>
+        </div>
+        <div class="red-color f-16">
+          <b (click)=signUpWithEmail()>{{static_string.us.or_sign_in_using_email}}</b>
+        </div>
+      </div>
+      <div class="footer m-btm m-top">
+      </div>
+    </div>
+  </div>
+</div>

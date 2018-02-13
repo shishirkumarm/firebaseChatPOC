@@ -1,0 +1,240 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color:gray;
+    font-family: sans-serif;
+}
+
+.wrapper{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.main-body{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.login-box{
+    margin: 0 auto;
+    margin-right: 7px;
+    min-width: 300px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-shadow: 7px 8px 11px -7px #888888;
+}
+
+.fb-box{
+    height: 50px;
+    background-color: #3b5999;
+    color: #fff;
+    border: 1px solid #3b5999;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+.google-box{
+    height: 50px;
+    background-color: #fff;
+    color: black;
+    border: 1px solid #979797;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.text-center{
+    text-align: center;
+}
+.social-logo{
+    width: 41px;
+    height: 30px;
+}
+.fb-logo{
+    width: 41px;
+    height: 30px;
+    
+}
+.inline {
+  display: inline-block;
+}
+.box-p-lr{
+    padding-left: 50px;
+    padding-right: 50px; 
+}
+.m-top{
+    margin-top: 10px;
+}
+.m-top-md{
+    margin-top: 30px;
+}
+.m-top-xl{
+    margin-top: 50px;
+}
+.m-top-xxl{
+    margin-top: 70px;
+}
+.m-btm{
+    margin-bottom: 30px;
+}
+.footer{
+    border-top: 1px solid #dfd6c4;
+    font-size: 12px;
+}
+.red-color{
+    color: #cf4520;
+    font-weight: 500;
+    margin: 40px 0px 40px 0px;
+    cursor: pointer;
+}
+.p-5{
+    padding: 5px;
+}
+.p-10{
+    padding: 10px;
+}
+.p-top{
+    padding-top: 10px;
+}
+.red-text{
+    color: #cf4520;
+}
+.set-icon{
+    position: relative;
+    top: 11px;
+}
+.f-12{
+    font-size: 12px;
+}
+.f-13{
+    font-size: 13px;
+}
+.f-14{
+    font-size: 14px;
+}
+.f-16{
+    font-size: 16px;
+}
+.f-18{
+    font-size: 18px;
+}
+.title-text{
+    font-weight: 600px;
+    font-size: 36px;
+    margin-top:30px;
+}
+.t-align-start{
+    text-align: start;
+}
+.t-align-center{
+    text-align: center;
+}
+.shift-right{
+    float: right
+}
+
+.login-btn{
+    background: #cf4520;
+    color: #fff;
+}
+.form-group label{
+    color: #676055;
+    font-size: 16px;
+    text-align: left;
+    padding-top: 10px;
+}
+.form-group input{
+    border-bottom: 1px solid #aea493;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    
+}
+.form-group select{
+    border-bottom: 1px solid #aea493;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    
+}
+.email-btn-align{
+    padding-top:30px;
+    padding-bottom: 30px;
+    margin: 0 15px;
+}
+.sub-title-color{
+    color: #676055;
+}
+.icon-align{
+    width: 40px;
+    height: 40px;
+}
+.inline{
+    display: inline-block;
+}
+.text-left{
+    text-align: left;
+}
+.google-svg{
+    background: url(./assets/img/google.svg#a) center no-repeat;
+     display: inline-block;
+}
+.fb-svg{
+    background: url(./assets/img/facebook.svg#a) center no-repeat;
+    display: inline-block;
+}
+a{
+    color: #cf4520;
+}
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+.form-group small{
+    color: red;
+    font-size: 10px;
+    text-align: left;
+    padding-top: 10px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.errorMsg{
+    color: red;
+    font-size: 15px;
+    text-align: left;
+    padding-top: 10px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+    tbody tr.tableheading {
+        border: 3px solid purple;
+    }
+  
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  
+  th, td {
+    padding: 20px;
+  }

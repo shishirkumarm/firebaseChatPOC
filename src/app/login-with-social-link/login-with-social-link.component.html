@@ -1,0 +1,34 @@
+<div class="login-box">
+  <div class="box-p-lr">
+    <div class="header text-center m-btm">
+      <div class="title-text"><b>Login</b></div>
+      <div class="f-16 sub-title-color">Log in to your Isha Profile</div>
+    </div>
+    <div class="main text-center m-top-xl">
+      <div class="">
+        <button type="button" (click)='loginWithFacebook()' class="btn btn-primary">
+          <div class="fb-svg icon-align"></div>
+          <div class="f-18 inline text-left">Continue with Facebook
+            <div class="f-13">We wont post without asking</div>
+          </div>
+        </button>
+      </div>
+      <div class="m-top">
+        <button type="button"  (click)='loginWithGoogle()' class="btn btn-default">
+          <div class="google-svg icon-align m-top-sm"></div>
+            <div class="inline f-18 g-text">Continue with Google</div>
+        </button>
+      </div>
+      <div class="red-color f-16"  (click)='loginWithEmail()'>
+        <b> Or, Sign in using Email ID </b>
+      </div>
+    </div>
+    <div class="footer m-btm m-top-xxl md-device">
+      <div class="p-top f-14">
+        <div>Don’t yet have an account?</div>
+        <div class="red-text inline f-16 cursor-pointer" (click)=signUp()>Sign Up</div>
+        <div class="red-text inline shift-right cursor-pointer">Terms of service</div>
+      </div>
+    </div>
+  </div>
+</div>

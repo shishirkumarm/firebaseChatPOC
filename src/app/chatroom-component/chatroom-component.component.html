@@ -1,0 +1,22 @@
+<div class="menu">
+    <div class="back" (click)="navigateHome()">
+      <i class="fa fa-angle-left"></i>
+      <img src="{{buddyObject.photoUrl}}" draggable="false"/>
+    </div>
+    <div class="name">Random chat</div>
+    <div class="members"><b>You</b>, {{buddyObject.name}}</div>
+</div>
+<ol class="chat">
+  <li  *ngFor="let chatItem of chatroomService.chatList | async" >
+    <div [ngClass]="{'self': chatItem.author == authService.currentUserId, 'other': chatItem.author != authService.currentUserId, 'msg': true}">
+      <p>{{chatItem.body}}</p>
+      <time>18:08</time>
+    </div>
+  </li>
+</ol>
+<div class="typezone">
+  <form name="form" [formGroup]="form" novalidate>
+    <textarea type="text" formControlName="chatMessage" placeholder="Say something"></textarea>
+    <button type="submit"  class="send" (click)="submit(form.value)"></button>
+  </form>
+</div>

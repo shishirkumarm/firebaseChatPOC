@@ -1,0 +1,21 @@
+# Spring properties
+spring:
+  application:
+     name: alertmgmt-service
+
+# HTTP Server
+server:
+  port: 8021
+
+#properties.location: /appdata
+properties.location: D:/HibernateMultiTenant/profile-mgmt-service/src/main/resources
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${discovery.url}
+
+ribbon:
+  eureka:
+    enabled: true

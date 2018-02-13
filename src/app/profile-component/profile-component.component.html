@@ -1,0 +1,23 @@
+<div class="split right">
+    <h2>Chat Messages</h2>
+    <div class="message-container">
+      <img src="./assets/img/bandmember.jpg" alt="Avatar" style="width:100%;">
+      <p>Hello. How are you today?</p>
+      <span class="time-right">11:00</span>
+    </div>
+
+    <div class="message-container" *ngFor="let chatItem of homeService.chatList | async" >
+      <img src="{{authService.userPhotoUrl}}" alt="Avatar" class='right' style="width:10%;">
+      <p>{{chatItem.body}}</p>
+      <span class="time-right">11:02</span>
+    </div>
+
+    <div class="message-container darker">
+        <form name="form" [formGroup]="form" novalidate>
+          <input formControlName="chatMessage" class="form-control">
+          <button type="button" class="btn btn-block login-btn" (click)="postMessage(form.value)">Send</button>
+        </form>
+    </div>
+
+    <button class="btn btn-default" (click)="logout()">Logout</button>
+  </div>
