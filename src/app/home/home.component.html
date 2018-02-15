@@ -1,10 +1,70 @@
-<div class="container">
-    <p class='welcome'>Welcome {{authService.currentUserDisplayName}}..</p>
-    <div class="split left">    
-      <ul id="myUL">
-        <li *ngFor="let buddyItem of homeService.usersList | async" (click)="startChatting(buddyItem)">
-          <span *ngIf="buddyItem.$key !== authService.currentUserId" >{{buddyItem.name}}</span>
-        </li>
-      </ul>
-    </div>
+<div class="container bootstrap snippet">
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="panel panel-default  customer-header">
+              <div class="panel-body p-t-0">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="media-main">
+                          <div class="pull-left">
+                              <img class="thumb-lg img-circle bx-s" src="{{authService.userPhotoUrl}}" alt="">
+                          </div>
+                          
+                          <div class="info" (click)="startChatting(buddyItem)">
+                              <h4>{{authService.currentUserDisplayName}}</h4>
+                              <p class="text-muted">{{authService.userEmail}}</p>
+                              <button class="text-muted" (click)="logout()">Logout</button>
+                          </div>
+                      </div>
+                      <div class="clearfix"></div>
+                  </div>
+              </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-sm-6" *ngFor="let buddyItem of homeService.usersList | async">
+          <div class="panel" *ngIf="buddyItem.$key !== authService.currentUserId">
+              <div class="panel-body p-t-10">
+                  <div class="media-main">
+                      <div class="pull-left">
+                          <img class="thumb-lg img-circle bx-s" src="{{buddyItem.photoUrl}}" alt="">
+                      </div>
+                      <div class="pull-right btn-group-sm">
+                          <div class="btn btn-success tooltips" (click)="startChatting(buddyItem)" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-comments"></i>
+                          </div>
+                          <div class="btn btn-danger tooltips" (click)="deleteChatHistory(buddyItem)" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </div>
+                      </div>
+                      <div class="info" (click)="startChatting(buddyItem)">
+                          <h4>{{buddyItem.name}}</h4>
+                          <p class="text-muted">{{buddyItem.email}}</p>
+                      </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <hr>
+                  <ul class="social-links list-inline p-b-10">
+                      <li>
+                          <div title="" data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Facebook"><i class="fa fa-facebook"></i></div>
+                      </li>
+                      <li>
+                          <div title="" data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Twitter"><i class="fa fa-twitter"></i></div>
+                      </li>
+                      <li>
+                          <div title="" data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></div>
+                      </li>
+                      <li>
+                          <div title="" data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Skype"><i class="fa fa-skype"></i></div>
+                      </li>
+                      <li>
+                          <div title="" data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Message"><i class="fa fa-envelope-o"></i></div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>

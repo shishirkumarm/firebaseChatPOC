@@ -30,6 +30,14 @@ export class HomeComponent implements OnInit{
 
   }
 
+  logout(){
+    this.authService.signOut();
+    this.router.navigate(['']);
+  }
+
+  deleteChatHistory(buddyItem) {
+
+  }
   startChatting(buddyItem) {
     this.homeService.startChatting(buddyItem);
   }

@@ -1,115 +1,54 @@
-.message-container {
-    border: 2px solid #dedede;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-}
-.welcome{
-    font-size:26px;
-    color: #cf4520;
-}
-.darker {
-    border-color: #ccc;
-    background-color: #ddd;
-}
-
-.message-container::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.message-container img {
-    float: left;
-    max-width: 60px;
-    width: 100%;
-    margin-right: 20px;
-    border-radius: 50%;
-}
-
-.split {
-    height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 52px;
+body{
+    margin-top:20px;
+    background-color: #edf0f0;    
   }
-  
-  /* Control the left side */
-  .left {
-    left: 0;
-    background-color:#eeeeee94;
+  .btn-primary, 
+  .btn-primary:hover, 
+  .btn-primary:focus, 
+  .btn-primary:active, 
+  .btn-primary.active, 
+  .btn-primary.focus, 
+  .btn-primary:active, 
+  .btn-primary:focus, 
+  .btn-primary:hover, 
+  .open>.dropdown-toggle.btn-primary {
+    background-color: #3bc0c3;
+    border: 1px solid #3bc0c3;
   }
-  
-  /* Control the right side */
-  .right {
-    right: 0;
-    background-color: #eeeeee94;
+  .p-t-10 {
+    padding-top: 10px !important;
   }
-  
-  /* If you want the content centered horizontally and vertically */
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  .media-main a.pull-left {
+    width: 100px;
   }
-  
-  /* Style the image inside the centered container, if needed */
-  .centered img {
-    width: 150px;
-    border-radius: 50%;
+  .thumb-lg {
+    height: 84px;
+    width: 84px;
   }
-
-.container img.right {
-    float: right;
-    margin-left: 20px;
-    margin-right:0;
-}
-
-.time-right {
-    float: right;
-    color: #aaa;
-}
-
-.time-left {
-    float: left;
-    color: #999;
-}
-#myInput {
-    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-    background-position: 10px 12px; /* Position the search icon */
-    background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 100%; /* Full-width */
-    font-size: 16px; /* Increase font-size */
-    padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
-    margin-bottom: 12px; /* Add some space below the input */
-}
-
-#myUL {
-    /* Remove default list styling */
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#myUL li {
+  .media-main .info {
+    overflow: hidden;
+    color: #000;
     cursor: pointer;
-    border: 1px solid #ddd; /* Add a border to all links */
-    margin-top: -1px; /* Prevent double borders */
-    background-color: #f6f6f6; /* Grey background color */
-    padding: 12px; /* Add some padding */
-    text-decoration: none; /* Remove default text underline */
-    font-size: 18px; /* Increase the font-size */
-    color: black; /* Add a black text color */
-    display: block; /* Make it into a block element to fill the whole list */
-}
-
-#myUL li a:hover:not(.header) {
-    background-color: #eee; /* Add a hover effect to all links, except for headers */
-}
+  }
+  .media-main .info h4 {
+    padding-top: 10px;
+    margin-bottom: 5px;
+  }
+  .social-links li a {
+    background: #EFF0F4;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: #7A7676;
+  }
+  .customer-header{
+    height: 130px;
+    margin-top: 2%;
+  }
+  .panel-body{
+      padding: 7px;
+  }

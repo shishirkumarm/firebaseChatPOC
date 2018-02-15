@@ -33,12 +33,10 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ChatroomComponentComponent } from './chatroom-component/chatroom-component.component';
-import { ProfileComponentComponent } from './profile-component/profile-component.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'profile', component: ProfileComponentComponent },
   { path: 'chaatroom', component: ChatroomComponentComponent },
   { path: 'locationupdate', component: LocationUpdateComponent },
   { path: 'signUpWithEmail', component: SignUpWithEmailComponent },
@@ -63,8 +61,7 @@ const routes: Routes = [
     ErrorMessageComponent,
     ResetPasswordComponent,
     ChangePasswordComponent,
-    ChatroomComponentComponent,
-    ProfileComponentComponent
+    ChatroomComponentComponent
   ],
   imports: [
     BrowserModule,
